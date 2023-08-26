@@ -27,13 +27,13 @@ esBigrams = ngrams(without_sw, 2)
 # Get the frequency of each bigram in the corpus
 esBigramFreq = collections.Counter(esBigrams)
 
-# Get the 80 most popular bigrams excluding specific words
+# Get the 100 most frequent bigrams excluding specific words
 most_freq_bigrams = [(bigram, freq) for bigram, freq in esBigramFreq.items() if
                      len(bigram[0]) > 1 and len(bigram[1]) > 1 and
                      bigram[0] not in ['would', 'could', 'should', 'might'] and
                      bigram[1] not in ['would', 'could', 'should', 'might']]
 
-# Get the 80 most popular bigrams
+# Get the 100 most frequent bigrams
 most_freq_bigrams = sorted(most_freq_bigrams, key=lambda x: x[1], reverse=True)[:100]
 print(most_freq_bigrams)
 
@@ -43,7 +43,7 @@ import pandas as pd
 df = pd.DataFrame(most_freq_bigrams, columns=['Bigram', 'Frequency'])
 
 # Export the DataFrame to an Excel file
-df.to_excel('most_frequent_bigrams_BROWN_final.xlsx', index=False)
+df.to_excel('most_frequent_bigrams_BROWN.xlsx', index=False)
 
 
 

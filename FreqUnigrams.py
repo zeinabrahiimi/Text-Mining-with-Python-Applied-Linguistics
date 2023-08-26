@@ -27,11 +27,11 @@ esUnigrams = ngrams(without_sw, 1)
 # Get the frequency of each unigram in the corpus
 esUnigramFreq = collections.Counter(esUnigrams)
 
-# Get the 80 most popular unigrams excluding specific words
+# Get the 100 most frequent unigrams excluding specific words
 most_freq_unigrams = [(unigram, freq) for unigram, freq in esUnigramFreq.items() if
                       len(unigram[0]) > 1]
 
-# Get the 80 most popular unigrams
+# Get the 100 most frequent unigrams
 most_freq_unigrams = sorted(most_freq_unigrams, key=lambda x: x[1], reverse=True)[:80]
 print(most_freq_unigrams)
 
@@ -41,7 +41,7 @@ import pandas as pd
 df = pd.DataFrame(most_freq_unigrams, columns=['Unigram', 'Frequency'])
 
 # Export the DataFrame to an Excel file
-df.to_excel('most_frequent_unigrams_BROWN_final.xlsx', index=False)
+df.to_excel('most_frequent_unigrams_BROWN.xlsx', index=False)
 
 
 

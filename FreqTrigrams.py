@@ -27,14 +27,14 @@ esTrigrams = ngrams(without_sw, 3)
 # Get the frequency of each trigram in the corpus
 esTrigramFreq = collections.Counter(esTrigrams)
 
-# Get the 80 most popular trigrams excluding specific words
+# Get the 100 most frequent trigrams excluding specific words
 most_freq_trigrams = [(trigram, freq) for trigram, freq in esTrigramFreq.items() if
                       len(trigram[0]) > 1 and len(trigram[1]) > 1 and len(trigram[2]) > 1 and
                       trigram[0] not in ['would', 'could', 'should', 'might'] and
                       trigram[1] not in ['would', 'could', 'should', 'might'] and
                       trigram[2] not in ['would', 'could', 'should', 'might']]
 
-# Get the 80 most popular trigrams
+# Get the 100 most frequent trigrams
 most_freq_trigrams = sorted(most_freq_trigrams, key=lambda x: x[1], reverse=True)[:80]
 print(most_freq_trigrams)
 
@@ -44,7 +44,7 @@ import pandas as pd
 df = pd.DataFrame(most_freq_trigrams, columns=['Trigram', 'Frequency'])
 
 # Export the DataFrame to an Excel file
-df.to_excel('most_frequent_trigrams_BROWN_final.xlsx', index=False)
+df.to_excel('most_frequent_trigrams_BROWN.xlsx', index=False)
 
 
 
