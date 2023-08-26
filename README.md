@@ -1,6 +1,6 @@
 Welcome to the Text Mining with Python for Applied Linguistics project!
 
-# ** Project Highlight **
+#  Project Highlight 
 In the realm of Applied Linguistics, text mining proved to be fruitful, especially in L2 Research. 
 For example, in this project, I am going to get the most frequent bigrams of different research paradigms, including Quantiative and Qualitative papers.
 What we actually did was to get the pattern of language use in these paradigms. Specifically, we can detect which two words occur most frequently in the corpus of Quantitative and Qualitative papers.
