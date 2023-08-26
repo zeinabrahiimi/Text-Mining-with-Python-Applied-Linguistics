@@ -8,6 +8,7 @@ The primary objective is to identify language usage patterns within these paradi
 The dataset is confidential as it is owned by my dear Linguistics Professor. Consequently, given the ethical considerations of data sharing, I am unable to share the specific data used in this analysis.
 ## Brown Corpus as a Substitue 
 Hence, to ensure transparency in data analysis, I have used the Brown corpus, an open-access dataset comprising of a versatile array of text from different resources. This corpus can serve as a substitue to showcase the keyword analysis. 
+Feel free to download the "BROWN.txt" file from this repository.
 ### Data Preprocessing
 The preprocessing step involves removing punctuations and numbers to end up having meaningful content words. 
 What is more, some extranous words, without substantial meaning, are excluded (e.g., could, should, would, etc.).
