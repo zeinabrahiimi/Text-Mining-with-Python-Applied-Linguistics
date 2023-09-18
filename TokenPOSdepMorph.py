@@ -33,6 +33,8 @@ df_linguistic_data.to_csv("linguistic_data.csv", index=False)
 print(" The dataframe for linguistic data was saved in a csv file! ")
 
 
+
+
 # Each DET det
 # part NOUN nsubj Number=Sing
 # of ADP prep
